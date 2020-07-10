@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		/>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#ca_total_and_new_line").load("./charts/ca_total_and_new_line.html");
+				$("#world_line").load("./charts/world_line.html");
+				$("#world_pie").load("./charts/world_pie.html");
+				$("#world_total_slider").load("./charts/world_total_slider.html");
+			});
+		</script>
+	</head>
+	<body>
+		<div id="ca_total_and_new_line"></div>
+		<div id="world_pie"></div>
+		<div id="world_line"></div>
+		<div id="world_total_animation" style="width: 100%;">
+			<button class="btn btn-info" id="loadWorldTotalAnimation">Play</button>
+			<image
+				src="./charts/world_total_animation.png"
+				class="flex-grow-0"
+			></image>
+		</div>
+		<div id="world_total_slider"></div>
+
+		<script>
+			$("#loadWorldTotalAnimation").click(function () {
+				$("#world_total_animation").load("./charts/world_total_animation.html");
+			});
+		</script>
+	</body>
+</html>
